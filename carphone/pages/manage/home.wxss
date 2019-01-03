@@ -1,0 +1,96 @@
+.allContainer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+}
+.myContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;   
+} 
+.image1{
+  width:750rpx;
+  height:300rpx;
+  margin-top:96rpx;
+}
+.surebtn{
+  display: block;
+  text-align: center;
+  background-color:#ffee93;
+  width:300rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  border-radius:40rpx;
+  color: #757575;
+  font-size: 32rpx;
+  margin: 45rpx auto 0;
+  box-shadow: 0px 2px 11px 1px #888888;
+}
+.infonum{
+  margin: 50rpx auto 0;
+  width: 634rpx;
+  color: #757575;
+  font-size: 28rpx;
+  text-align: center;
+}
+.info1{
+  color: #757575;
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}
+.input{
+  position: relative;
+  display: block;
+  margin: 38rpx auto 0;
+  width: 440rpx;
+}
+.input .section{
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #999999;
+  margin-bottom: 38rpx;
+  color: #757575;
+}
+.info2{
+  color: #757575;
+  font-size: 46rpx;
+  text-align: center;
+  margin-top: 178rpx;
+  font-weight: bold;
+}
+.info3{
+  position: absolute;
+  left:0;
+  bottom: 150rpx;
+  width: 750rpx;
+  color: #757575;
+  font-size: 32rpx;
+  text-align: center;
+}
+.info4{
+  position: absolute;
+  left:0;
+  bottom: 34rpx;
+  width: 750rpx;
+  color: #757575;
+  font-size: 20rpx;
+  text-align: center;
+}
+.carNum{
+  text-align:center;
+  color:#757575;
+  font-size:72rpx;
+  font-weight:bold;
+  border-top:2rpx solid #999999;
+  border-bottom:2rpx solid #999999;
+  width:434rpx;
+  margin:28rpx auto 0;
+  padding:18rpx 0;
+}
+
+

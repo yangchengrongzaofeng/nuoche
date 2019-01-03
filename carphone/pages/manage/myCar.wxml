@@ -1,0 +1,43 @@
+<view class="myContainer">
+  <div><image src="../../resource/5.png" class="image1"/></div>
+  <view wx:if="{{currentStatus==1}}">
+    <div class="surebtn"> 拍摄车牌 </div>
+    <view class="info1">或</view>
+    <div class="input">
+      <div class="section">
+        <input placeholder-style="color:#909090" placeholder="手动输入车牌号" />
+      </div>
+    </div>
+    <view class="info2">给您带来不便深表歉意</view>
+  </view>
+  <view class="carNum" wx:if="{{currentStatus==2&&myData.length>1}}">
+    <view class="switch touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{myData}}" wx:key="id" wx:for-item="item">
+      <view class="switchcar content">
+        <text class="{{item.remainTime<=0||!item.remainTime?'num warncolor':'num'}}">{{item.carNum}}</text><switch class="switchbtn" id="{{item.id}}" checked="{{item.status==1}}" bindchange="switchChange"/>
+      </view>
+      <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+      <view class="changeBlock">
+        <view class="changeNum_ changeNum_more" id="{{index}}" bindtap="toChangeInfo">修改车牌</view>
+        <view class="switchinfo" wx:if="{{item.status==1}}">当前可被呼叫</view>
+        <view class="switchinfo" wx:else>当前不能被呼叫</view>
+      </view>
+    </view>
+    <!-- <view class="switch" wx:for="{{myData}}" wx:key="id" wx:for-item="item">
+      <view class="switchcar">
+        <text class="{{item.remainTime<=0||!item.remainTime?'num warncolor':'num'}}">{{item.carNum}}</text><switch class="switchbtn" id="{{item.id}}" checked="{{item.status==1}}" bindchange="switchChange"/>
+      </view>
+      <view class="changeNum_ changeNum_more" id="{{index}}" bindtap="toChangeInfo">修改车牌</view>
+      <view class="switchinfo" wx:if="{{item.status==1}}">当前可被呼叫</view>
+      <view class="switchinfo" wx:else>当前不能被呼叫</view>
+    </view> -->
+  </view>
+  <view wx:if="{{currentStatus==2&&myData.length==1}}">
+    <view class="carNum_">{{myData[0].carNum}}</view>
+    <view class="changeNum_" id="0" bindtap="toChangeInfo">修改车牌</view>
+    <div class="switchbtn_"><text class="ml_">允许被呼叫</text><switch id="{{myData[0].id}}" checked="{{myData[0].status==1}}" bindchange="switchChange"/></div>
+    <view class="switchinfo_">关闭后扫码将无法被呼叫</view>
+  </view>
+  <view class="info3"><text decode="{{true}}">安全至上&emsp;隐私挪车</text></view>
+  <view class="info3 info_warn" wx:if="{{!!warnContent}}">注意：您的{{warnContent}}120分钟通信费已经用完，若您再继续使用将显示的是您的真实号码！</view>
+  <view class="info4">2018@ Carcat</view>
+</view>

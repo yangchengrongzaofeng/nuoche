@@ -1,0 +1,24 @@
+<view class="myContainer">
+  <div><image src="../../resource/1.png" class="image1"/></div>
+  <div class="input">
+    <div class="section">
+      <input maxlength="11" style="width:240rpx;" bindinput="bindKeyInput" id="phone" placeholder-style="color:#909090" placeholder="手机号" value="{{userData.phone}}" />
+      <button wx:if="{{butType==2}}" class="sendCode" bindtap="sendCode">{{codeTitle}}</button>
+      <button wx:if="{{butType==1}}" open-type="getPhoneNumber" class="sendCode" bindgetphonenumber="getPhoneNumber"> 获取手机号 </button>
+      <!-- <button open-type="getPhoneNumber" class="getphone" bindgetphonenumber="getPhoneNumber"> 获取 </button> -->
+    </div>
+    <div class="section">
+      <input maxlength="4" bindinput="bindKeyInput" id="authCode" placeholder-style="color:#909090" placeholder="验证码" />
+    </div>
+    <div class="section" style="margin-bottom: 0;">
+      <input maxlength="12" bindinput="bindKeyInput" id="carNum" value="{{userData.carNum}}" placeholder-style="color:#909090" placeholder="车牌号" />
+    </div>
+  </div>
+  <button class="surebtn" disabled="{{disabled_regist}}" bindtap="registSubmit"> 注册 </button>
+  <!-- <navigator target="miniProgram" open-type="navigate" app-id="wx31f69d6c5166ed4f" version="release">车充</navigator> -->
+  <view class="info1"><text decode="{{true}}">安全至上&emsp;隐私挪车</text></view>
+  <view class="info2">2018@ Carcat</view>
+</view>
+<view class="loading" wx:if="{{showloading}}">
+  <image src="../../resource/loading.png" />
+</view>

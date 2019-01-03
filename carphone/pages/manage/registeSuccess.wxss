@@ -1,0 +1,43 @@
+.myContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;  
+} 
+.image1{
+  width:750rpx;
+  height:298rpx;
+  margin-top:105rpx;
+}
+.info1{
+  color: #757575;
+  font-size: 32rpx;
+  text-align: left;
+  margin: 52rpx auto 0;
+  width: 480rpx;
+  line-height: 50rpx;
+}
+.image2{
+  width:750rpx;
+  height:267rpx;
+  margin-top:13rpx;
+}
+.surebtn{
+  display: block;
+  text-align: center;
+  background-color:#ffee93;
+  width:300rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  border-radius:40rpx;
+  color: #757575;
+  font-size: 32rpx;
+  margin: 82rpx auto 0;
+  box-shadow: 0px 2px 11px 1px #888888;
+}
+.info2{
+  color: #757575;
+  font-size: 20rpx;
+  text-align: center;
+  margin-top: 24rpx;
+}

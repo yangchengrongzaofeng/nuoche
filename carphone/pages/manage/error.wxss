@@ -1,0 +1,18 @@
+/* pages/manage/error.wxss */
+.myContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  text-align: center;
+} 
+.image1{
+  width:580rpx;
+  margin-top:180rpx;
+}
+.info{
+  color: #757575;
+  font-size: 40rpx;
+  text-align: center;
+  margin-top: 80rpx;
+}
