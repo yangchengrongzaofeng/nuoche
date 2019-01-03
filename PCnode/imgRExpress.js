@@ -7,10 +7,10 @@ client.on('error',function(error){
 var mysql = require('mysql');
 var pool = mysql.createPool({
     connectionLimit : 100,//连接池数
-    host      : 'localhost',
-    user      : 'root',
-    password    : 'zaofeng1234',//本地是123456
-    database    : 'carnumber'
+    host      : '******',
+    user      : '*****',
+    password    : '******',//本地是123456
+    database    : '*******'
 });
 //使用getConnection方法-执行
 function querySQL(sql, params, callback){

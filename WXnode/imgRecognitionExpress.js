@@ -5,14 +5,14 @@ var fs = require("fs");
 var WXBizDataCrypt = require('./WXBizDataCrypt');
 var SHA = require('./SHA');
 var sha = new SHA();
-var appid = 'wx765132c865199ed8';
-var secret = 'ffc06bd1b5a3afd722fb1b1b0e7b3c8e';
+var appid = '*****';
+var secret = '*****';
 var sms = {
-    appKey :'f0b06ba5ce1e140b536c7d5e2b25c91c',
-    appSecret :'1a2fa4241515',
-    templateid: '3953385',//短信验证码
-    templateid2: '4073453',//号码有异常
-    templateid3: '9404199',//费用已用完
+    appKey :'*****',
+    appSecret :'****',
+    templateid: '****',//短信验证码
+    templateid2: '****',//号码有异常
+    templateid3: '****',//费用已用完
 }
 //获取微信用户openid和session_key 
 function getOpenId(code,response,encryptedData,iv){
@@ -232,10 +232,10 @@ function send_Warning(phones){//phones=['13888888888','13666666666'],content=['x
  */
 const PLSClient = require('@alicloud/pls-sdk');
 // ACCESS_KEY_ID/ACCESS_KEY_SECRET 根据实际申请的账号信息进行替换
-const accessKeyId = 'LTAIWXem92OYS66Q';
-const secretAccessKey = 'jdnuqEZxOZh4KlZdm1XJj8lWkRxlM9';
+const accessKeyId = '*****';
+const secretAccessKey = '******';
 //在云通信页面开通相应业务消息后，就能在页面上获得对应的queueName
-const queueName = 'Alicom-Queue-1488876601468376-SecretReport';
+const queueName = '******';
 //初始化sms_client
 const plsClient = new PLSClient({ accessKeyId, secretAccessKey });
 const PoolKey = 'FC100000056678406';
@@ -452,8 +452,8 @@ var pool = mysql.createPool({
     connectionLimit : 100,//连接池数
     host      : 'localhost',
     user      : 'root',
-    password    : 'zaofeng1234',//本地是123456
-    database    : 'carnumber'
+    password    : '*****',//本地是123456
+    database    : '*****'
 });
 //使用getConnection方法-执行
 function querySQL(sql, params, callback){
