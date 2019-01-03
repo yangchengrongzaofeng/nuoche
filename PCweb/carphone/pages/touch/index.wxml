@@ -1,0 +1,14 @@
+
+<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="">
+    <view class='content' bindtap='showDetail' data-index="{{index}}">
+      <view class='column'>
+        <view class='row full_width'>
+          <text style='font-weight: bold;line-height:60rpx;'>{{item.name}}</text>
+          <text style='margin-left:30rpx;color:gray;line-height:60rpx;'>{{item.unit}}</text>
+          <text style='margin-left:20rpx;color:gray;line-height:60rpx;'>{{item.job}}</text>
+        </view>
+        <text style='margin-top:10rpx;color:gray;'>{{item.phone}}</text>
+      </view>
+    </view>
+    <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+</view>
