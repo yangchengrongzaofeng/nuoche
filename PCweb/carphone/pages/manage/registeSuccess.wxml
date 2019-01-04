@@ -1,9 +1,0 @@
-<view class="myContainer">
-  <div><image src="../../resource/2.png" class="image1"/></div>
-  <view class="info1">
-    <text decode="{{true}}">请将停车二维码贴于车窗显著位置当需要挪车时，扫描二维码可联系到您。不需要时可在小程序关闭此功能。</text>
-  </view>
-  <div><image src="../../resource/3.png" class="image2"/></div>
-  <button class="surebtn" bindtap="toMy"> 下一步 </button>
-  <view class="info2">2018@ Carcat</view>
-</view>

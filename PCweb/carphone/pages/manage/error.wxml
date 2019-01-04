@@ -1,8 +1,0 @@
-<!--pages/manage/error.wxml-->
-<view class="myContainer">
-  <view>
-    <image src="../../resource/error.png" class="image1"/>
-  </view>
-  <view class="info"><text>{{content}}</text></view>
-</view>
-
