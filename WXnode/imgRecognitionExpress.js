@@ -5,14 +5,14 @@ var fs = require("fs");
 var WXBizDataCrypt = require('./WXBizDataCrypt');
 var SHA = require('./SHA');
 var sha = new SHA();
-var appid = '*****';
-var secret = '*****';
+var appid = 'wx765132c865199ed8';
+var secret = 'ffc06bd1b5a3afd722fb1b1b0e7b3c8e';
 var sms = {
-    appKey :'*****',
-    appSecret :'****',
-    templateid: '****',//短信验证码
-    templateid2: '****',//号码有异常
-    templateid3: '****',//费用已用完
+    appKey :'f0b06ba5ce1e140b536c7d5e2b25c91c',
+    appSecret :'1a2fa4241515',
+    templateid: '3953385',//短信验证码
+    templateid2: '4073453',//号码有异常
+    templateid3: '9404199',//费用已用完
 }
 //获取微信用户openid和session_key 
 function getOpenId(code,response,encryptedData,iv){
@@ -232,10 +232,10 @@ function send_Warning(phones){//phones=['13888888888','13666666666'],content=['x
  */
 const PLSClient = require('@alicloud/pls-sdk');
 // ACCESS_KEY_ID/ACCESS_KEY_SECRET 根据实际申请的账号信息进行替换
-const accessKeyId = '*****';
-const secretAccessKey = '******';
+const accessKeyId = 'LTAIWXem92OYS66Q';
+const secretAccessKey = 'jdnuqEZxOZh4KlZdm1XJj8lWkRxlM9';
 //在云通信页面开通相应业务消息后，就能在页面上获得对应的queueName
-const queueName = '******';
+const queueName = 'Alicom-Queue-1488876601468376-SecretReport';
 //初始化sms_client
 const plsClient = new PLSClient({ accessKeyId, secretAccessKey });
 const PoolKey = 'FC100000056678406';
@@ -452,8 +452,8 @@ var pool = mysql.createPool({
     connectionLimit : 100,//连接池数
     host      : 'localhost',
     user      : 'root',
-    password    : '*****',//本地是123456
-    database    : '*****'
+    password    : 'zaofeng1234',//本地是123456
+    database    : 'carnumber'
 });
 //使用getConnection方法-执行
 function querySQL(sql, params, callback){
@@ -618,7 +618,7 @@ function toExcuteGetManager(virtualNum){
     });
 }
 //用车牌号查询车主记录和虚拟号码----2
-function toExcuteGetVirtualNum(phoneRows,response){
+function toExcuteGetVirtualNum_Random(phoneRows,response){
     //随机选择一条可用记录
     var sql_search_count = 'SELECT COUNT(*) as num FROM virtual_pools_aliyun WHERE status=0;';
     querySQL(sql_search_count,[],function(rowsC,fields){
@@ -636,6 +636,19 @@ function toExcuteGetVirtualNum(phoneRows,response){
                     response.end('{"errcode":30002,"msg":"'+phoneRows[0].carNum+'"}');
                 }
             });
+        }else{//虚拟号码已经用光了
+            response.end('{"errcode":30002,"msg":"'+phoneRows[0].carNum+'"}');
+        }
+    });
+}
+function toExcuteGetVirtualNum(phoneRows,response){
+    //取使用次数最少中的一条可用记录
+    var sql_search_count = 'select a.* from virtual_pools_aliyun a where useTimes = (select MIN(useTimes) from virtual_pools_aliyun where status=0) limit 1;';
+    querySQL(sql_search_count,[],function(rows,fields){
+        console.log(rows[0]);
+        if(rows.length>0){//有空闲虚拟号码
+            console.log('to---设置',rows[0].id);
+            toExcuteUseVirtual(rows[0],phoneRows,response);
         }else{//虚拟号码已经用光了
             response.end('{"errcode":30002,"msg":"'+phoneRows[0].carNum+'"}');
         }
@@ -683,8 +696,9 @@ function toExcuteGetPhoneByQrcodeId(qrcodeId,response){
 }
 //虚拟号码设置成使用中----3
 function toExcuteUseVirtual(virtualData,phoneRows,response){
-  var sql_update = 'UPDATE virtual_pools_aliyun set status=1 where id=? ;';
-  var update_params = [virtualData.id];
+  var sql_update = 'UPDATE virtual_pools_aliyun set status=1, useTimes=? where id=? ;';
+  virtualData.useTimes++;
+  var update_params = [virtualData.useTimes,virtualData.id];
   querySQL(sql_update,update_params,function(rows,fields){
     console.log(virtualData.id,'设置成使用成功');
         bindPhone(phoneRows,virtualData.virtualNum,response);
@@ -800,7 +814,8 @@ function getBackVirtualNum_(subsId,virtualNum){
         if(virtualNum.length==13){
             virtualNum = virtualNum.substring(2,13);//去掉前面的86
         }
-        toExcuteBackVirtual(subsId,virtualNum);
+        // toExcuteBackVirtual(subsId,virtualNum);
+        freePhone(subsId,virtualNum);
     },180000);
 }
 //查询该手机号是否加入到了白名单中，是则可免短信验证注册
