@@ -1,0 +1,13 @@
+<!--noPaperLeft.wxml-->
+<view class="errorContainer">
+  <view style="width:261rpx;height:266rpx;">
+    <image style="width:100%;height:100%;" src="../../resource/nopaper.png" background-size="cover"></image>
+  </view>
+  <view>
+    <text class="errorFontText">哎呀，纸巾卖光了！</text>
+    <view style="height:150rpx;" />
+  </view>
+  <view style="height:266rpx;" />
+</view>
+
+

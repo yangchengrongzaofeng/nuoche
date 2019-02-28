@@ -1,0 +1,15 @@
+/* blena.wxss */
+
+.blueIcon {
+  width: 100%;
+  text-align: center;
+}
+
+.blueIcon_img {
+  width: 416rpx;
+  height: 414rpx;
+}
+
+.blue_info {
+  color: #fff;
+}

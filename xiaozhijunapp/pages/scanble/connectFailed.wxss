@@ -1,0 +1,5 @@
+/* connectFailed.wxss */
+.img{
+	width: 640rpx;
+	height: 480rpx;
+}

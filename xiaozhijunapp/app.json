@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/scanble/scanble",
+    "pages/scanble/blena",
+    "pages/scanble/connectFailed",
+    "pages/scanble/noPaperLeft",
+    "pages/scanble/success",
+    "pages/scanble/bindUser",
+    "pages/scanble/deviceList",
+    "pages/scanble/deviceInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#2fb8b4",
+    "navigationBarTitleText": "小纸君",
+    "navigationBarTextStyle": "#fff",
+    "backgroundcolor":"#23b2ae"
+  }
+}

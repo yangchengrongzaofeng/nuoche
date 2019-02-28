@@ -1,0 +1,145 @@
+/* deviceList.wxss */
+.head{
+	border: 1rpx solid grey;
+	overflow: hidden;
+	white-space: nowrap;
+	font-weight: 600;
+	height: 66rpx;
+	line-height:66rpx;
+	background-color: #eef1f6;
+	font-size: 30rpx;
+}
+.head span{
+	display: inline-block;
+	text-align: center;
+	color: #1f2d3d;
+	vertical-align:middle;
+}
+.body{
+	border: 1rpx solid grey;
+	border-top:none;
+	height: 60rpx;
+	line-height:60rpx;
+	font-size: 26rpx;
+}
+.body:focus{
+	background-color: #eef1f6;
+}
+.body:hover{
+	background-color: #eef1f6;
+}
+.body span{
+	display: inline-block;
+	text-align: center;
+	color: #1f2d3d;
+	vertical-align:middle;
+}
+.body.err span{
+	color: #ff4646;
+}
+.body.warn span{
+	color: #ff6a3b;
+}
+.clum1 , .clum2 , .clum3 , .clum5{
+	border-right: 1rpx solid grey;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.clum1{
+	width: 36%;
+}
+.clum2{
+	width: 14%;
+}
+.clum3{
+	width: 26%;
+}
+.clum4{
+	width: 10%;
+}
+.clum5{
+	width: 12%;
+}
+.clu1 , .clu2 , .clu3{
+	border-right: 1rpx solid grey;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.clu1{
+	width: 38%;
+}
+.clu2{
+	width: 20%;
+}
+.clu3{
+	width: 20%;
+}
+.clu4{
+	width: 20%;
+}
+.body .clum4 span,.body .clu4 span{
+	color: #20a0ff;
+	display: inline-block
+}
+.body .clum4 span:hover,.body .clu4 span:hover{
+	color:blue;
+}
+.body .clum4 span:focus,.body .clu4 span:focus{
+	color:blue;
+}
+.clum4 .mr-24{
+	margin-right:24rpx;
+}
+.clum4 .mr-12{
+	margin-right:12rpx;
+}
+.condition{
+	vertical-align:middle;
+	padding:10rpx 18rpx;
+	margin-top:10rpx;
+  text-align: right;
+  height: 62rpx;
+}
+
+.searchinput{
+	display: inline-block !important;
+	font-size: 32rpx;
+	text-align: left;
+	border: 2rpx solid grey;
+	border-radius: 10rpx;
+	padding: 0 66rpx 0 20rpx;
+	margin-left: 45rpx;
+}
+.seatchicon{
+	margin-left:-54rpx;
+
+}
+.main{
+  padding: 20rpx 18rpx 10rpx 18rpx;
+  font-size: 32rpx;
+  color: #1f2d3d;
+}
+.mainInfo{
+  width: 100%;
+}
+.mainInfo text{
+  width: 50%;
+  display: inline-block;
+}
+.mainInfoL{
+  text-align: left;
+}
+.mainInfoR{
+  text-align: right;
+  color: red;
+}
+button.addbut{
+  font-size: 30rpx;
+  width: 220rpx;
+  float: left;
+  margin-top: -10rpx;
+  background-color: #2fb8b4;
+  color: #fff;
+}

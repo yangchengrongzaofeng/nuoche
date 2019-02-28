@@ -1,0 +1,16 @@
+<!--index.wxml-->
+
+<view class="topContainer">
+  <view class="qrcode">
+    <image src="../../resource/step.png" background-size="cover"></image>
+  </view>
+</view>
+<view class="bottomContainer">
+  <view class="centerContainer">
+    <image src="../../resource/scan_icon.png" background-size="cover" bindtap="launchScanCode"></image>
+  </view>
+  <view style="height:50rpx;" />
+  <text class="info1">扫一扫</text>
+  <!-- <text class="info2">客服电话 400-683-1169</text> -->
+  <button class="errorPhone info2" type="default" plain="false" bindtap="phoneCall" hover-class="other-button-hover">客服电话 400-683-1169</button>
+</view>

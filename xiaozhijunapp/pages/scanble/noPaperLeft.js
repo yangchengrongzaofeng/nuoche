@@ -1,0 +1,3 @@
+// noPaperLeft.js
+Page({
+})

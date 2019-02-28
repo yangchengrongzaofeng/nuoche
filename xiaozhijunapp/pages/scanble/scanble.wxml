@@ -1,0 +1,32 @@
+<!--scanble.wxml-->
+<view class="container container_blue" wx:if="{{showChoice}}">
+  <form class="my-class">
+    <!-- <view class="search" wx:if="{{BXDeviceList.length==0}}">正在搜索纸巾机，请耐心等待...</view> -->
+    <view class="devicelist {{showChoice?'bounceIn':''}}">
+      <view class="section_title">请选择您面前颜色对应的纸巾机</view>
+      <view class="titleBo"></view>
+      <view class="deviceblock">
+        <div class="device" wx:for="{{BXDeviceList}}" wx:key="device.deviceId" data-hi="{{index+1}}" bindtap="choiceDevice">
+          <div class="device-type color{{item.value}}"></div>
+          <text class="device-color">{{item.color+'机'}}</text>
+          <div class="device-chioce">
+            <div class="{{(!!item.checked)?'choice':''}}"></div>
+          </div>
+        </div>
+      </view>
+      <view class="sure">
+        <button class="choiceBut" bindtap="sureChoiceD" plain="{{true}}"> 确定 </button>
+      </view>
+    </view>
+  </form>
+</view>
+<view class="container container_blue" wx:else>
+  <view class="wrap">
+    <view class="top">
+      <canvas class="cir" style="width:424rpx; height:424rpx;" canvas-id="canvasArc">
+      </canvas>
+      <text class="pro">{{progress}}%</text>
+    </view>
+    <view class="lining"><text>正在与纸巾机连接中...</text></view>
+  </view>
+</view>

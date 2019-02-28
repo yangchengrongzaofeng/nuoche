@@ -1,0 +1,60 @@
+<!--deviceList.wxml-->
+<view class="main">
+	<view>当前用户：{{userData.phone}}</view>
+	<view class="mainInfo">
+		<text class="mainInfoL">已卖纸巾：{{userData.sold||0}}</text>
+		<text class="mainInfoR">纸巾库存：{{userData.totalOrder||0}}</text>
+	</view>
+</view>
+<view class="condition">
+	<button type="default" class="addbut" bindtap="startBlue" wx:if="{{!tofindDevice}}"> 搜索新设备 </button>
+	<button type="default" class="addbut" bindtap="stopBlue" wx:else> 停止搜索 </button>
+	<view wx:if="{{!tofindDevice}}">
+		<input class="searchinput" type="text" maxlength="15" placeholder="请输入设备名称" focus="{{false}}" bindinput="bindInput" value="{{searchText}}" />
+		<icon class="seatchicon" bindtap="searchByName" type="search" color="#10aeff" size="22"/>
+	</view>
+</view>
+<view></view>
+<view wx:if="{{!tofindDevice}}">
+	<view class="head">
+		<span class="clum1">设备名</span>
+		<span class="clum2">纸巾数</span>
+		<span class="clum5">状态</span>
+		<span class="clum3">备注</span>
+		<span class="clum4">操作</span>
+	</view>
+	<view class="body {{idx<5?'err':(idx<10?'warn':'')}}" wx:for="{{deviceList}}" wx:key="macAddress" wx:for-index="idx" wx:if="{{deviceList.length>0}}">
+		<span class="clum1">{{item.deviceName ||'暂无'}}</span>
+		<span class="clum2">{{item.remain}}</span>
+		<span class="clum5" wx:if="{{item.status==3}}">使用中</span>
+		<span class="clum5" wx:else>已作废</span>
+		<span class="clum3">{{item.comments||'暂无'}}</span>
+		<span class="clum4">
+			<span data-hi="{{idx}}" class="mr-12" bindtap="editDevice">编辑</span>
+		</span>
+	</view>
+	<view class="body" wx:if="{{deviceList.length==0&&!!loadFinish}}" style="font-size:30rpx;text-align:center;">
+		<span>您暂无设备</span>
+	</view>
+</view>
+<view wx:else>
+	<view class="head">
+		<span class="clu1">设备名</span>
+		<span class="clu2">设备类型</span>
+		<span class="clu3">信号强度</span>
+		<span class="clu4">操作</span>
+	</view>
+	<view class="body" wx:for="{{BXDeviceList}}" wx:key="name" wx:for-index="idx" wx:if="{{BXDeviceList.length>0}}">
+		<span class="clu1">{{item.name ||'暂无'}}</span>
+		<span class="clu2">{{item.color ||'暂无'}}</span>
+		<span class="clu3">{{item.RSSI ||'暂无'}}</span>
+		<span class="clu4">
+			<span data-hi="{{idx}}" class="mr-12" bindtap="addDevice">绑定</span>
+		</span>
+	</view>
+	<view class="body" wx:if="{{BXDeviceList.length==0}}" style="font-size:30rpx;text-align:center;">
+		<span>正在搜索设备中....</span>
+	</view>
+</view>
+
+

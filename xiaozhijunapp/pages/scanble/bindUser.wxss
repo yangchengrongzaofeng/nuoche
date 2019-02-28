@@ -1,0 +1,25 @@
+/* bindUser.wxss */
+
+input {
+  border: 4rpx solid green;
+  padding: 8rpx;
+  border-radius: 10rpx;
+  width: 580rpx;
+  display: inline-block;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.info {
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20rpx;
+  font-size: 50rpx;
+}
+
+.button {
+  width: 80%;
+  margin-bottom: 60rpx;
+}

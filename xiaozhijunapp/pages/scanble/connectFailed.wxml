@@ -1,0 +1,9 @@
+<!--connectFailed.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="img" src="../../resource/sorry.png" background-size="cover"></image>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">没有找到对应的纸巾机</text>
+  </view>
+</view>

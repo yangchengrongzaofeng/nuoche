@@ -1,0 +1,10 @@
+<!--bindUser.wxml-->
+<view class="container container_blue">
+  <view style="text-align: center;">
+    <input type="text" class="name" id="userName" bindinput="bindKeyInput" maxlength="15" placeholder="请输入姓名" />
+    <input type="number" class="phone" id="userPhone" bindinput="bindKeyInput" maxlength="11" placeholder="请输入手机号" />
+    <button class="button" type="primary" size="default" loading="{{loading}}" disabled="{{disabled}}" bindtap="toBindUser"> 绑定 </button>
+    <text class="info">身份绑定后，</text>
+    <text class="info">你就是小纸君的家臣了哦！</text>
+  </view>
+</view>

@@ -1,0 +1,288 @@
+.ss {
+  background-color: blue;
+  height: 1rpx;
+  width: 100%;
+}
+
+.item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.fillheight {
+  height: 100%;
+}
+
+.progress {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 100%;
+  background-color: "#ececec";
+}
+
+.my-class {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.search {
+  font-size: 46rpx;
+  color: #fff;
+  text-align: center;
+  margin-top: 200rpx;
+}
+
+.devicelist {
+  position: relative;
+  top: 80rpx;
+  left: calc((100% - 640rpx)/2);
+  width: 640rpx;
+  background: #fff;
+  border-radius: 40rpx;
+  padding-top: 54rpx;
+  padding-bottom: 55rpx;
+}
+
+.section_title {
+  position: relative;
+  top: 0;
+  opacity: 0.8;
+  letter-spacing: -0.2px;
+  text-align: center;
+  font-size: 38rpx;
+  color: #808080;
+  letter-spacing: -0.24px;
+}
+
+.titleBo {
+  width: 576rpx;
+  border-bottom: 2rpx dotted #808080;
+  display: block;
+  margin-top: 16rpx;
+  margin-left: 32rpx;
+}
+
+.deviceblock {
+  position: relative;
+  top: 0rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.device {
+  position: relative;
+  display: inline-block;
+  margin-left: 3%;
+  width: 226rpx;
+  margin-top: 60rpx;
+}
+
+.device-type {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100rpx;
+}
+
+.device-color {
+  position: absolute;
+  top: 80rpx;
+  font-size: 38rpx;
+  color: #fff;
+  left: 42rpx;
+}
+
+.color1 {
+  background: #eba10c;
+}
+
+.color2 {
+  background: #15aefd;
+}
+
+.color3 {
+  background: #b8d708;
+}
+
+.color4 {
+  background: #0bd1c5;
+}
+
+.device-chioce {
+  width: 60rpx;
+  height: 60rpx;
+  border: 4rpx solid #808080;
+  border-radius: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 68rpx;
+  top: 12rpx;
+}
+
+.device-chioce div {
+  display: block;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.device-chioce div.choice {
+  border: 4rpx solid #808080;
+  border-radius: 20rpx;
+  background: #808080;
+}
+
+.sure {
+  margin-top: 110rpx;
+}
+
+button.choiceBut {
+  width: 440rpx;
+  height: 108rpx;
+  line-height: 108rpx;
+  opacity: 0.96;
+  border: 4rpx solid #23b2ae;
+  border-radius: 200rpx;
+  font-size: 48rpx;
+  color: #24b3af;
+  letter-spacing: -0.09px;
+}
+
+.wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top: -210rpx;
+}
+
+.top {
+  margin-left: 106rpx;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.cir {
+  display: inline-block;
+  margin-top: 20rpx;
+}
+
+.pro {
+  font-size: 72rpx;
+  color: #fff;
+  position: absolute;
+  top: 118rpx;
+  width: 280rpx;
+  text-align: center;
+  left: 0;
+  display: block;
+}
+
+.lining {
+  width: 100%;
+  text-align: center;
+  margin-top: -140rpx;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+@-webkit-keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+  }
+}
+
+@keyframes bounceInDown {
+  0%, 60%, 75%, 90%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  animation: bounceInDown 1s both;
+  -webkit-animation: bounceInDown 1s both; /* Safari 和 Chrome */
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation: bounceIn 0.3s ease both;
+  -webkit-animation: bounceIn 0.3s ease both; /* Safari 和 Chrome */
+}

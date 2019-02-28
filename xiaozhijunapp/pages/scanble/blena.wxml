@@ -1,0 +1,10 @@
+<!--blena.wxml-->
+<view class="container container_blue">
+  <view class="blueIcon">
+    <image class="blueIcon_img" src="../../resource/blue.png" background-size="cover"></image>
+    <view style="height: 40rpx;" />
+  </view>
+  <view class="usermotto">
+    <text class="blue_info">请打开手机蓝牙，再使用微信扫码支付</text>
+  </view>
+</view>

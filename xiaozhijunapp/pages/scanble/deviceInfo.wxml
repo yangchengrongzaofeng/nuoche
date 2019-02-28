@@ -1,0 +1,32 @@
+<!--deviceInfo.wxml-->
+<view class="deviceInfo">
+  <form bindsubmit="saveEdit" report-submit="{{true}}">
+    <view class="title">
+      <button class="canclebut" type="default" size="mini" bindtap="cancleEdit"> 取消 </button>
+      <text class="titleInfo">编辑</text>
+      <button class="savebut" type="primary" formType="submit" size="mini"> 保存 </button>
+    </view>
+    <view class="content">
+      <view>
+        <text>设备名称：</text>
+        <input class="deviceName info" type="text" name="deviceName" placeholder="请输入设备名称" maxlength="20" value="{{deviceData.deviceName}}" />
+      </view>
+      <view class="papernumb">
+        <text>剩余纸巾数量：</text>
+        <input class="paper info" type="number" name="remain" placeholder="请输入纸巾数" focus="false" value="{{deviceData.remain}}" />
+      </view>
+      <view>
+        <text>设备状态：</text>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker info">
+            {{array[index]}}（点击可修改）
+          </view>
+        </picker>
+      </view>
+      <view>
+        <text class="addressT">备注：</text>
+        <textarea class="address info" name="comments" maxlength="200" placeholder="请输入备注" value="{{deviceData.comments}}" />
+      </view>
+    </view>
+  </form>
+</view>

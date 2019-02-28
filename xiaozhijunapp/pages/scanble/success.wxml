@@ -1,0 +1,19 @@
+<!--success.wxml-->
+<view class="container container_blue">
+  <view class="success_but">
+    <view class="success_bb">
+      <image class="success_img" src="{{deviceUrl}}"></image>
+    </view>
+    <view class="v_h_70"></view>
+    <view class="successTitle">
+      <text>小纸君(<text>{{deviceColor}}</text>机)可以取纸了</text>
+    </view>
+    <view class="successInfo">
+      <text>向右转动旋钮180度，纸巾就滑出来啦</text>
+    </view>
+  </view>
+  <view>
+    <button class="errorPhone" type="default" plain="false" bindtap="phoneCall" hover-class="other-button-hover">客服电话 400-683-1169</button>
+    <view class="bottomline"></view>
+  </view>
+</view>

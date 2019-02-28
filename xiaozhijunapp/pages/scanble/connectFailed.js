@@ -1,0 +1,3 @@
+// connectFailed.js
+Page({
+})
